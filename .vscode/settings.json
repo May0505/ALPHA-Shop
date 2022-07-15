@@ -1,0 +1,16 @@
+{
+  // 不要用內建 js 檢查 code
+  "javascript.validate.enable": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "eslint.probe": [
+      "javascript",
+      "javascriptreact",
+      "vue"
+  ],
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": [
+    "source.formatDocument",
+    "source.fixAll.eslint"
+  ],
+  "vetur.validation.template": false
+}

@@ -1,0 +1,21 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .itemGroup > ul{
+    display: flex;
+    .link {
+      list-style: none;
+      margin-right: 32px;
+      > a {
+        text-decoration: none;
+        color: #2A2A2A;
+      }
+    }
+  }
+  .iconGroup {
+    .icon {
+      margin-right: 32px;
+    }
+  }
+}

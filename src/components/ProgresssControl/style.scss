@@ -1,0 +1,26 @@
+.progressStep {
+padding: 48px 0 120px 0;
+    .btnGroup {
+      display: flex;
+      justify-content: space-between;
+      border-top: solid 1px lightgrey;
+      button {
+      margin-top: 24px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+    }
+    .previous {
+      background-color: #FFFFFF;
+      color: #000000;
+      width: 174px;
+      height: 46px;
+    }
+    .next {
+      background-color: #F67599;
+      color: #FFFFFF;
+      width: 174px;
+      height: 46px;
+    }
+  }
+}
