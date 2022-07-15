@@ -12,7 +12,7 @@
 
 `1.` 開啟終端機，將專案 clone 到本地<br />
 
-<pre><code>https://github.com/May0505/URL_shortener.git</code></pre><br />
+<pre><code>https://github.com/May0505/ALPHA-Shop.git</code></pre><br />
 
 `2.` 切換到該資料夾
 
