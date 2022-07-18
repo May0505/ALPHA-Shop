@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import '../css/style.scss';
 import { Header } from './Header/index';
-import { ProgressControl } from './ProgresssControl/index';
+import { ProgressControl } from './ProgressControl/index';
 import { Cart } from './Cart/index';
 import { Step1 } from './Step1';
 import { Step2 } from './Step2';

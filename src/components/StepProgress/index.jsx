@@ -1,28 +1,29 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import './style.scss';
-import Number1 from '../../assets/img/Number1.svg';
-import Number2 from '../../assets/img/Number2.svg';
-import Number3 from '../../assets/img/Number3.svg';
-// import ArrowCheck from '../../assets/img/ArrowCheck.svg';
 
-export const StepProgress = () => {
+const StepProgressFlow = {
+  step: Number,
+};
+
+export const StepProgress: React.FC<StepProgressFlow> = (props) => {
+  const { step } = props;
   return (
     <div className="stepProgress">
       <div className="title">結帳</div>
       <div className="progressBlock">
-        <div className="item">
-          <img src={Number1} alt="" className="number" />
+        <div className={step === 1 ? 'activeitem' : 'item'}>
+          <div className={step === 1 ? 'activeNumber' : 'number'}>1</div>
           寄送地址
         </div>
         <span className="connectLine" />
-        <div className="item">
-          <img src={Number2} alt="" className="number" />
+        <div className={step === 2 ? 'activeitem' : 'item'}>
+          <div className={step === 2 ? 'activeNumber' : 'number'}>2</div>
           運送方式
         </div>
         <span className="connectLine" />
-        <div className="item">
-          <img src={Number3} alt="" className="number" />
+        <div className={step === 3 ? 'activeitem' : 'item'}>
+          <div className={step === 3 ? 'activeNumber' : 'number'}>3</div>
           付款資訊
         </div>
       </div>

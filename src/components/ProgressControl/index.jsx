@@ -4,11 +4,18 @@ import './style.scss';
 import arrowLeft from '../../assets/img/arrowLeft.svg';
 import arrowRight from '../../assets/img/arrowRight.svg';
 
-export const ProgressControl = ({ step, setStep }) => {
+type ProgressControlFlow = {
+  step: Number,
+  setStep: Function,
+};
+
+export const ProgressControl: React.FC<ProgressControlFlow> = (props) => {
+  const { step, setStep } = props;
   let previousText;
   let nextText = '下一步';
   let previusArrow;
   let nextArrow = <img src={arrowRight} alt="" />;
+
   const clickNext = () => {
     if (step === 3) return;
     setStep(step + 1);
@@ -31,6 +38,7 @@ export const ProgressControl = ({ step, setStep }) => {
       {previousText}
     </button>
   );
+
   const next = (
     <button className="next" onClick={clickNext}>
       {nextText}
@@ -38,16 +46,10 @@ export const ProgressControl = ({ step, setStep }) => {
     </button>
   );
 
-  let ShowPrevious;
-
-  if (step.step !== 1) {
-    ShowPrevious = previous;
-  }
-
   return (
     <div className="progressStep">
       <div className="btnGroup">
-        {ShowPrevious}
+        {previous}
         {next}
       </div>
     </div>

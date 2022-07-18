@@ -8,13 +8,40 @@
   .progressBlock{
     display: flex;
     align-items: center;
+    .activeitem{
+      display: flex;
+      align-items: center;
+      color:#000;
+    }
     .item{
       display: flex;
       align-items: center;
+      color: lightgray;
+    }
+      .activeNumber {
+        margin-right: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #000;
+        border-radius: 50%;
+        height: 22px;
+        width: 22px;
+        color: aliceblue;
+      }
       .number {
         margin-right: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+        border-radius: 50%;
+        height: 22px;
+        width: 22px;
+        color: lightgray;
+        border: 1px solid lightgray;
       }
-    }
+    
     .connectLine {
       margin: 0 32px;
       height: 1px;

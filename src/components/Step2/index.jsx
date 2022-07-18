@@ -13,8 +13,12 @@ export const Step2 = () => {
   ];
   const option = optionList.map((item) => {
     return (
-      <div className={checked === item.name ? 'row checked' : 'row'}>
+      <div
+        className={checked === item.name ? 'row checked' : 'row'}
+        key={`${item.name}1`}
+      >
         <input
+          readOnly
           checked={checked === item.name}
           name="delivery"
           type="radio"
