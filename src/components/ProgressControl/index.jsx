@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
-import './style.scss';
+import style from './style.module.scss';
 import arrowLeft from '../../assets/img/arrowLeft.svg';
 import arrowRight from '../../assets/img/arrowRight.svg';
 
@@ -33,22 +33,22 @@ export const ProgressControl: React.FC<ProgressControlFlow> = (props) => {
     nextArrow = null;
   }
   const previous = (
-    <button className="previous" onClick={clickPrevious}>
+    <button className={style.previous} onClick={clickPrevious}>
       {previusArrow}
       {previousText}
     </button>
   );
 
   const next = (
-    <button className="next" onClick={clickNext}>
+    <button className={style.next} onClick={clickNext}>
       {nextText}
       {nextArrow}
     </button>
   );
 
   return (
-    <div className="progressStep">
-      <div className="btnGroup">
+    <div className={style.progressStep}>
+      <div className={style.btnGroup}>
         {previous}
         {next}
       </div>

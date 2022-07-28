@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
-import './style.scss';
+import style from './style.module.scss';
 
 export const Step2 = () => {
   const [checked, setChecked] = useState('標準運送');
@@ -14,7 +14,11 @@ export const Step2 = () => {
   const option = optionList.map((item) => {
     return (
       <div
-        className={checked === item.name ? 'row checked' : 'row'}
+        className={
+          checked === item.name
+            ? `${style.row} ${style.checked}`
+            : `${style.row}`
+        }
         key={`${item.name}1`}
       >
         <input
@@ -24,7 +28,7 @@ export const Step2 = () => {
           type="radio"
           onClick={() => atClick(item.name)}
         />
-        <div className="radioLeft">
+        <div className={style.radioLeft}>
           <label>{item.name}</label>
           <label>{item.content}</label>
         </div>
@@ -34,8 +38,8 @@ export const Step2 = () => {
   });
 
   return (
-    <div className="form">
-      <div className="title">運送方式</div>
+    <div className={style.form}>
+      <div className={style.title}>運送方式</div>
       {option}
     </div>
   );

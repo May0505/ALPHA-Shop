@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
-import './style.scss';
+import style from './style.module.scss';
 import logo from '../../assets/img/Logo.svg';
 import cart from '../../assets/img/cart.svg';
 import search from '../../assets/img/search.svg';
@@ -10,7 +10,7 @@ export const Header = () => {
   const links = ['男款', '女款', '最新消息', '客製商品', '聯絡我們'];
   const link = links.map((item) => {
     return (
-      <li className="link" key={item}>
+      <li className={style.link} key={item}>
         <a href="/">{item}</a>
       </li>
     );
@@ -19,7 +19,7 @@ export const Header = () => {
   const icons = [search, cart, theme];
   const icon = icons.map((item) => {
     return (
-      <a className="icon" href="/" key={item}>
+      <a className={style.icon} href="/" key={item}>
         <img src={item} alt="" />
       </a>
     );
@@ -27,15 +27,15 @@ export const Header = () => {
 
   return (
     <header>
-      <div className="itemGroup">
+      <div className={style.itemGroup}>
         <ul>{link}</ul>
       </div>
-      <div className="logo">
+      <div className={style.logo}>
         <a href="/">
           <img src={logo} alt="" />
         </a>
       </div>
-      <div className="iconGroup">{icon}</div>
+      <div className={style.iconGroup}>{icon}</div>
     </header>
   );
 };
