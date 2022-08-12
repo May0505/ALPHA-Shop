@@ -1,12 +1,12 @@
 // eslint-disable-next-line no-unused-vars
-import React from 'react';
+import React, { memo } from 'react';
 import style from './style.module.scss';
 import logo from '../../assets/img/Logo.svg';
 import cart from '../../assets/img/cart.svg';
 import search from '../../assets/img/search.svg';
 import theme from '../../assets/img/theme.svg';
 
-export const Header = () => {
+const Header = memo(() => {
   const links = ['男款', '女款', '最新消息', '客製商品', '聯絡我們'];
   const link = links.map((item) => {
     return (
@@ -38,4 +38,6 @@ export const Header = () => {
       <div className={style.iconGroup}>{icon}</div>
     </header>
   );
-};
+});
+
+export default Header;

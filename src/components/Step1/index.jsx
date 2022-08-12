@@ -1,9 +1,9 @@
 // eslint-disable-next-line no-unused-vars
-import React from 'react';
+import React, { memo } from 'react';
 // import cx from 'classnames';
 import style from './style.module.scss';
 
-export const Step1 = () => {
+const Step1 = memo(() => {
   const sexList = ['先生', '女士', '不明'];
   const sex = sexList.map((item) => {
     return (
@@ -85,4 +85,6 @@ export const Step1 = () => {
       </div>
     </div>
   );
-};
+});
+
+export default Step1;

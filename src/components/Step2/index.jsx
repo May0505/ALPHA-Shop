@@ -1,8 +1,8 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useState } from 'react';
+import React, { useState, memo } from 'react';
 import style from './style.module.scss';
 
-export const Step2 = () => {
+const Step2 = memo(() => {
   const [checked, setChecked] = useState('標準運送');
   const atClick = (item) => {
     setChecked(item);
@@ -43,4 +43,6 @@ export const Step2 = () => {
       {option}
     </div>
   );
-};
+});
+
+export default Step2;

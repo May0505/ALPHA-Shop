@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-import React from 'react';
+import React, { memo } from 'react';
 import style from './style.module.scss';
 import arrowLeft from '../../assets/img/arrowLeft.svg';
 import arrowRight from '../../assets/img/arrowRight.svg';
@@ -9,7 +9,7 @@ type ProgressControlFlow = {
   setStep: Function,
 };
 
-export const ProgressControl: React.FC<ProgressControlFlow> = (props) => {
+const ProgressControl: React.FC<ProgressControlFlow> = memo((props) => {
   const { step, setStep } = props;
   let previousText;
   let nextText = '下一步';
@@ -54,4 +54,6 @@ export const ProgressControl: React.FC<ProgressControlFlow> = (props) => {
       </div>
     </div>
   );
-};
+});
+
+export default ProgressControl;

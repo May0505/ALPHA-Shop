@@ -1,12 +1,12 @@
 // eslint-disable-next-line no-unused-vars
-import React from 'react';
+import React, { memo } from 'react';
 import style from './style.module.scss';
 
 const StepProgressFlow = {
   step: Number,
 };
 
-export const StepProgress: React.FC<StepProgressFlow> = (props) => {
+const StepProgress: React.FC<StepProgressFlow> = memo((props) => {
   const { step } = props;
   return (
     <div className={style.stepProgress}>
@@ -29,4 +29,6 @@ export const StepProgress: React.FC<StepProgressFlow> = (props) => {
       </div>
     </div>
   );
-};
+});
+
+export default StepProgress;
